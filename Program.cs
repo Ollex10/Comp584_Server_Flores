@@ -1,3 +1,4 @@
+using Comp584_Server_Flores;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -19,6 +20,8 @@ builder.Services.AddIdentity<WorldModelUser, IdentityRole>(options =>
 
 })
     .AddEntityFrameworkStores<Comp584Context>();
+
+builder.Services.AddScoped<JwtHandler>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
