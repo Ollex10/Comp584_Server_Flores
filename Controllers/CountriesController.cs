@@ -18,6 +18,7 @@ namespace Comp584_Server_Flores.Controllers
 
 
         // GET: api/Countries
+        
         [HttpGet]
         [Authorize]
         public async Task<ActionResult<IEnumerable<Country>>> GetCountries()
